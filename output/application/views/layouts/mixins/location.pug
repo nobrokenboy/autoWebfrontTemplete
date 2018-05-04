@@ -1,0 +1,7 @@
+mixin location(id,items)
+    .location-wrapper
+        span 当前位置:
+        ul(id=id)
+            each item in items
+                li
+                    a(href=item.href)=item.name

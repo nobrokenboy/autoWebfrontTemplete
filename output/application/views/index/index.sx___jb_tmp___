@@ -1,0 +1,16 @@
+extends ../layouts/default
+block variable
+    -var prefix='../../..';
+block title
+    title 测试页眉
+    script.
+        window.alert('开启测试中');
+block content
+    h1 哈哈哈哈哈
+    +article('Hello Yii')
+    +article('Hello Yii')
+        p Lisk
+        p Hekala
+
+    +location('location',[{href:'/index',name:"首页"},{href:'/login',name:"登录"}])
+block scripts

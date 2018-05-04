@@ -1,0 +1,15 @@
+include ./config
+include ./mixins/index
+doctype html
+html(lang="en")
+    head
+        block variable
+            -var prefix='../..';
+        link(rel="icon", href="http://static.test.o-home.com/v2/image/layouts/ohome.ico")
+        meta(http-equiv="Content-Type",content="text/html; charset=utf-8")
+        meta(http-equiv="X-UA-Compatible",content="IE=edge")
+        link(rel="stylesheet",href= ctx+"/css/public.css")
+        block title
+    body
+        block content
+        block scripts

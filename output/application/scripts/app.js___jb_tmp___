@@ -1,0 +1,13 @@
+import util from './lib/utils/index'
+import filter from './lib/util/filter'
+import vueCompontent from './lib/components/index'
+import ask from './lib/interface/interface'
+
+
+
+window._ = util;
+window.vueFilter = filter;
+window.vueCompontent = vueCompontent;
+window.ohomeAsk = ask
+
+

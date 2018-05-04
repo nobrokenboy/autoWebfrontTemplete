@@ -1,0 +1,17 @@
+extends ../layouts/default
+block variable
+    -var prefix='../../..';
+block title
+    title 测试页眉
+    style
+        include:scss:autoprefixer(browsers=["last 4 version","iOS>=8","Android >= 4.0"]) ./index.scss
+    script.
+        window.alert('开启测试中');
+block content
+    h1 哈哈哈哈哈
+    +article('Hello Yii')
+    +article('Hello Yii')
+        p Lisk
+        p Hekala
+    +location('location',[{href:'/views/index.html',name:"首页"},{href:'/views/login.html',name:"登录"}])
+block scripts

@@ -1,0 +1,10 @@
+a{
+   font-size: 14px;
+   color:#ff8000;
+   &:hover{
+      text-decoration:underline;
+   }
+}
+.flex{
+   display:flex;
+}
