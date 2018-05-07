@@ -1,0 +1,26 @@
+mixin navigation(id,items)
+    nav(id=id)
+        ul.nav-wrapper
+            each i in items
+                li.nav-item
+                    object
+                        if i.href
+                            a(href=i.href)=i.name
+                            ul.nav-wrapper-children
+                                each a in i.childrens
+                                    li.nav-item-children
+                                        object
+                                            if a.href
+                                                a(href=a.href)=a.name
+                                            else
+                                                span=a.name
+                        else
+                            span=i.name
+                            ul.nav-wrapper-children
+                                each a in i.childrens
+                                    li.nav-item-children
+                                        object
+                                            if a.href
+                                                a(href=a.href)=a.name
+                                            else
+                                                span=a.name

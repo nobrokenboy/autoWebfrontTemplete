@@ -14,4 +14,5 @@ block content
         p Lisk
         p Hekala
     +location('location',[{href:'/views/index.html',name:"首页"},{href:'/views/login.html',name:"登录"}])
+    +navigation('testNav',[{href:'/views/index.html',name:"首页",childrens:[{name:"选择"},{href:'/views/index/1.html',name:'哈哈哈'}]},{href:'/views/login.html',name:"登录",childrens:[{name:"选择"},{href:'/views/index/1.html',name:'哈哈哈'}]}])
 block scripts
