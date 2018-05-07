@@ -1,0 +1,37 @@
+extends ../layouts/default.pug
+block variable
+    -var prefix='../../../';
+block title
+    title 登录页面
+    style
+        include:scss:autoprefixer(browsers=["last 4 version","iOS>=8","Android >= 4.0"]) ./login.scss
+    script.
+block content
+    #login
+        aside
+        section
+            .logo-wrapper
+                .logo
+            input#husername(type='hidden', value='')
+            input#hpassword(type='hidden', value='')
+            .login-content
+                form#loginForm
+                    figure
+                        img.login-img(src='')
+                    h3.login-title XX管理平台
+                    .form-text
+                        label 账号
+                        input(type='text', name='username', v-model.trim='loginParams.username', @input="verifyLoginParams.isUsernameFalse=false,backEndMsg=''", @keyup.enter='loginOperation')
+                    .form-tip-msg
+                        span(v-if='verifyLoginParams.isUsernameFalse') *账户不能为空
+                    .form-text
+                        label 密码
+                        input(type='password', name='password', v-model.trim='loginParams.password', @input="verifyLoginParams.isPasswordFalse=false,backEndMsg=''", @keyup.enter='loginOperation')
+                    .form-tip-msg
+                        span(v-if='verifyLoginParams.isPasswordFalse') *密码不能为空
+                    button.btn-login(type='button', @click='loginOperation', :disabled='isLoginBtnDisabled') 登录
+                    p.font-orange
+                    p
+                        a.font-orange.text-underline(target='_blank') 首次登陆，请设置密码
+block scripts
+    script(src='./login.js')
